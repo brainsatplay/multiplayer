@@ -1,3 +1,3 @@
 import {settings} from './app/settings.js'
-let app =  new brainsatplay.Application(settings)
+let app =  new brainsatplay.App(settings)
 app.init()
