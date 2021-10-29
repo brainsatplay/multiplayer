@@ -21,9 +21,9 @@ export const settings = {
     graphs:
     [{
       nodes: [
-        {name: 'eeg', class: brainsatplay.plugins.biosignals.EEG},
-        {name: 'neurofeedback', class: brainsatplay.plugins.algorithms.Neurofeedback, params: {}},
-        {name: 'brainstorm', class: brainsatplay.plugins.networking.Brainstorm, params: {
+        {name: 'eeg', class: 'EEG'},
+        {name: 'neurofeedback', class: 'Neurofeedback', params: {}},
+        {name: 'brainstorm', class: 'Brainstorm', params: {
 
           onUserConnected: (u) => {
             let parser = settings.graphs[0].nodes.find(n => n.name === 'parser')
@@ -37,7 +37,7 @@ export const settings = {
 
         }},
         {name: 'parser', class: Parser, params: {}},
-        {name: 'ui', class: brainsatplay.plugins.interfaces.DOM, params: {
+        {name: 'ui', class: 'DOM', params: {
           style: `
           .brainsatplay-ui-container {
             width: 100%;
@@ -75,6 +75,6 @@ export const settings = {
       ]
     }],
 
-    version: '0.0.37',
+    version: '0.0.38',
     connect: true
 }
